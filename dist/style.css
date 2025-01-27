@@ -1,3 +1,32 @@
+:root {
+  --red: rgb(165, 0, 36);
+  --white: rgb(255, 255, 255);
+  --black: rgb(0, 0, 0);
+  --kofi1: rgb(255, 90, 22);
+  --kofi2: rgb(204, 61, 0);
+  --bluesky1: rgb(0, 133, 255);
+  --bluesky2: rgb(0, 91, 175);
+  --twitch1: rgb(169, 112, 255);
+  --twitch2: rgb(97, 31, 196);
+  --throne1: rgb(182, 20, 217);
+  --throne2: rgb(121, 1, 148);
+  --youtube1: rgb(255, 0, 51);
+  --youtube2: rgb(151, 0, 30);
+}
+
+.buttons:hover {
+  scale: 105%;
+  cursor: pointer;
+}
+
+.footer__signature:hover {
+  opacity: 100%;
+  cursor: pointer;
+}
+.footer__signature__img:hover {
+  scale: 110%;
+}
+
 /* makes sizing simpler */
 *,
 *::before,
@@ -30,4 +59,155 @@ svg,
 video {
   display: block;
   max-width: 100%;
+}
+
+body {
+  font-family: "Montserrat";
+  background-color: var(--black);
+  animation-duration: 3s;
+  animation-name: fade-in;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0%;
+  }
+}
+body to {
+  opacity: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  min-height: 100vh;
+  background-image: linear-gradient(var(--red) 30%, var(--black) 90%);
+}
+
+.container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.contents {
+  display: grid;
+  justify-items: center;
+  padding: 2rem 3rem;
+  border-radius: 2rem;
+  box-shadow: 0 0.625rem 0.5rem 0 rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-backdrop-filter: blur(4rem);
+          backdrop-filter: blur(4rem);
+}
+.contents__pfp {
+  width: 11rem;
+  height: 11rem;
+  background-image: url("../../../assets/images/profile.webp");
+  background-position: 70% 15%;
+  border-radius: 6rem;
+  border-style: solid;
+  border-width: 0.3125rem;
+  border-color: var(--red);
+  box-shadow: 0 0.625rem 0.25rem 0 rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+}
+.contents__header {
+  padding: 1.5rem 0 1rem 0;
+  font-size: 3rem;
+  font-weight: 700;
+  -webkit-text-stroke-width: 0.125rem;
+  -webkit-text-stroke-color: var(--white);
+}
+.contents__paragraph {
+  font-size: 1.375rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 2rem;
+  max-width: 25rem;
+  margin-bottom: 1.5rem;
+}
+
+.buttons {
+  display: grid;
+  grid-template: 1fr/auto auto;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+  align-items: center;
+  text-decoration: none;
+  outline: none;
+  width: 100%;
+  border-radius: 2rem;
+  padding: 0.5rem 2rem;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 0.375rem 0.25rem 0 rgba(0, 0, 0, 0.3);
+  margin-bottom: 1.25rem;
+}
+.buttons__text {
+  text-align: right;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.0625rem;
+  -webkit-text-stroke-width: 0.03125rem;
+  -webkit-text-stroke-color: var(--white);
+  color: var(--white);
+}
+.buttons__icons {
+  grid-area: 1/2/2/3;
+  max-width: 3rem;
+  max-height: 3rem;
+}
+.buttons__bluesky {
+  background: linear-gradient(0.25turn, var(--bluesky1), var(--bluesky2) 80%);
+}
+.buttons__kofi {
+  background: linear-gradient(0.25turn, var(--kofi1), var(--kofi2) 80%);
+}
+.buttons__throne {
+  background: linear-gradient(0.25turn, var(--throne1), var(--throne2) 80%);
+}
+.buttons__twitch {
+  background: linear-gradient(0.25turn, var(--twitch1), var(--twitch2) 80%);
+}
+.buttons__youtube {
+  background: linear-gradient(0.25turn, var(--youtube1), var(--youtube2) 80%);
+}
+
+.links-container {
+  width: 25rem;
+}
+
+.footer {
+  display: grid;
+  justify-content: center;
+  margin-top: 3rem;
+}
+.footer__signature {
+  opacity: 40%;
+  width: 8rem;
+  height: 8rem;
+  transition: all 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    background-image: linear-gradient(var(--red) 70%, var(--black) 100%);
+  }
+  .contents {
+    padding: 2rem 2rem;
+  }
+  .contents__header {
+    font-size: 3rem;
+  }
+  .contents__paragraph {
+    font-size: 1.125rem;
+    max-width: 20rem;
+  }
+  .links-container {
+    width: 20rem;
+  }
 }

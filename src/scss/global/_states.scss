@@ -1,3 +1,22 @@
 @use "../util/functions" as util;
 @use "../global/variables" as var;
 @use "../global/typography" as fonts;
+
+.buttons:hover {
+    scale: 105%;
+
+    cursor: pointer;
+}
+
+.footer {
+    &__signature {
+        &:hover {
+            opacity: 100%;
+            cursor: pointer;
+        }
+    
+        &__img:hover {
+            scale: 110%;
+        }
+    }
+}
