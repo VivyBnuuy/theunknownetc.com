@@ -91,7 +91,7 @@ body {
 
         max-width: util.rem(400);
 
-        margin-bottom: util.rem(24);
+        margin-bottom: util.rem(16);
     }
 }
 
@@ -158,6 +158,8 @@ body {
 
 .links-container {
     width: util.rem(400);
+
+    margin-top: util.rem(8);
 }
 
 .footer {

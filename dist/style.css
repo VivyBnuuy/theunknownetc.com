@@ -22,9 +22,7 @@
 .footer__signature:hover {
   opacity: 100%;
   cursor: pointer;
-}
-.footer__signature__img:hover {
-  scale: 110%;
+  scale: 105%;
 }
 
 /* makes sizing simpler */
@@ -124,12 +122,12 @@ body to {
   -webkit-text-stroke-color: var(--white);
 }
 .contents__paragraph {
-  font-size: 1.375rem;
+  font-size: 1.25rem;
   font-weight: 700;
   text-align: center;
   line-height: 2rem;
   max-width: 25rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .buttons {
@@ -179,6 +177,7 @@ body to {
 
 .links-container {
   width: 25rem;
+  margin-top: 0.5rem;
 }
 
 .footer {
